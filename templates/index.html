@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admission Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="content">
+        <h1>Admission Prediction</h1>
+        <!--<div class="flex-form">-->
+            <form action="/predict" method="POST">
+                <input type="number" name="gre_score" id="gre_score" placeholder="GRE Score">
+                <input type="number" name="toefl_score" id="toefl_score" placeholder="TOEFL Score">
+                <input type="number" name="university_rating" id="university_rating" placeholder="University Rating">
+                <input type="number" name="sop" id="sop" placeholder="SOP Score">
+                <input type="number" name="lor" id="lor" placeholder="LOR Score">
+                <input type="number" name="cgpa" id="cgpa"placeholder="CGPA" step="any">
+                <p> Are you interesed in Research ?
+                    <select name="research" id="research">
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                </select>
+                </p>
+                <button type="submit" value="Predict">Predict</button>
+            </form>
+        <!--</div>-->
+    </div>
+</body>
+</html>
